@@ -8,4 +8,4 @@ sh install-scripts/nvim/install-vectorcode.sh
 sh install-scripts/nvim/install-neovim.sh
 sh install-scripts/install-de.sh
 
-stow -t ~ .config/ 
+stow -t ~/.config .config

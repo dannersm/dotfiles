@@ -10,8 +10,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable chroma
 sudo systemctl start chroma
 
-
-
 # VectorCode CLI installation
 sudo apt update
 pipx install vectorcode[lsp,mcp]
