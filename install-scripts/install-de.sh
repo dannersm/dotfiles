@@ -1,2 +1,2 @@
 sudo apt update
-sudo apt install -y tint2 rofi 
+sudo apt install -y rofi i3 polybar
