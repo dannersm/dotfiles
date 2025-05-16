@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow
+sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow xclip
 
 # Install Brave
 curl -fsS https://dl.brave.com/install.sh | sh
