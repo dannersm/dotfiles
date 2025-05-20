@@ -1,8 +1,5 @@
 sudo apt update
-sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow xclip
-
-# Install Brave
-curl -fsS https://dl.brave.com/install.sh | sh
+sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow xclip tlp
 
 # Install starship
 sudo curl -sS https://starship.rs/install.sh | sh
