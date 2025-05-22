@@ -10,3 +10,8 @@ sh install-scripts/nvim/install-neovim.sh
 sh install-scripts/install-de.sh
 
 stow -t ~/.config .config
+chmod +x ~/.config/polybar/system-bluetooth.sh
+
+echo 'export PATH="$PATH:/opt/nvim/"' >> ~/.bashrc
+echo "alias vim='nvim'" >> ~/.bashrc
+echo 'eval "$(starship init bash)"' >> ~/.bashrc

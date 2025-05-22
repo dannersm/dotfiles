@@ -26,35 +26,3 @@ fc-cache -fv
 echo "Cleaning up..."
 rm -rf ~/Downloads/fonts
 
-# Set as XFCE Terminal font
-echo "Setting XFCE Terminal font..."
-CONFIG_DIR="$HOME/.config/xfce4/terminal"
-CONFIG_FILE="$CONFIG_DIR/terminalrc"
-
-# Create config directory if it doesn't exist
-mkdir -p "$CONFIG_DIR"
-
-# Create or update the configuration file
-if [ -f "$CONFIG_FILE" ]; then
-    # If config exists, update the font settings
-    if grep -q "FontName=" "$CONFIG_FILE"; then
-        sed -i 's/FontName=.*/FontName=FantasqueSansMono Nerd Font 12/g' "$CONFIG_FILE"
-    else
-        echo "FontName=FantasqueSansMono Nerd Font 12" >> "$CONFIG_FILE"
-    fi
-    
-    if grep -q "FontUseSystem=" "$CONFIG_FILE"; then
-        sed -i 's/FontUseSystem=.*/FontUseSystem=FALSE/g' "$CONFIG_FILE"
-    else
-        echo "FontUseSystem=FALSE" >> "$CONFIG_FILE"
-    fi
-else
-    # If config doesn't exist, create a new one with basic settings
-    cat > "$CONFIG_FILE" << EOF
-[Configuration]
-FontName=FantasqueSansMono Nerd Font 12
-FontUseSystem=FALSE
-EOF
-fi
-
-echo "Font installation complete. You may need to restart XFCE Terminal for changes to take effect."
