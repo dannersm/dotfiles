@@ -1,0 +1,6 @@
+{
+	"embedding_params": {
+		"model_name":  "jinaai/jina-embeddings-v2-base-code"
+	},
+	"db_url": "http://127.0.0.1:8003",
+	"chunk_size": 2048}
