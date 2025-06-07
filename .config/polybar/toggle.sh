@@ -2,5 +2,7 @@
 if pgrep -x polybar > /dev/null; then
   killall -q polybar
 else
-  polybar main &
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar main &
+  done
 fi
