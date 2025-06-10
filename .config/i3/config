@@ -65,12 +65,8 @@ bindsym $mod+g exec "sh ~/.config/polybar/toggle.sh"
 bindsym $mod+Shift+b exec blueman-manager
 
 bindsym $mod+s exec "maim -s | xclip -selection clipboard -t image/png"
-bindsym $mod+Shift+s exec "maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png "
-bindsym $mod+Shift+Ctrl+s exec "maim | xclip -selection clipboard -t image/png"
 
-bindsym $mod+s exec "maim -s ~/Pictures/$(date +%s).png"
-bindsym $mod+Shift+s exec "maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png"
-bindsym $mod+Shift+Ctrl+s exec "maim ~/Pictures/$(date +%s).png"
+bindsym $mod+Shift+p exec "maim -s ~/Pictures/$(date +%s).png"
 
 # change focus
 bindsym $mod+h focus left
@@ -162,7 +158,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+x exec "i3-msg exit"
+bindsym $mod+Shift+x exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
