@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow xclip tlp
+sudo apt install -y git curl wget tmux ripgrep fd-find neofetch unzip stow xclip tlp maim
 
 # Install starship
 sudo curl -sS https://starship.rs/install.sh | sh
