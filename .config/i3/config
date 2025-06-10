@@ -35,6 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpapers/genei_ryodan_overlay.jpg &
 exec_always --no-startup-id picom &
+#exec_always --no-startup-id "xrandr --output DP-3 --right-of HDMI-1"
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -62,6 +63,14 @@ bindsym $mod+b exec firefox
 bindsym $mod+t exec thunar
 bindsym $mod+g exec "sh ~/.config/polybar/toggle.sh"
 bindsym $mod+Shift+b exec blueman-manager
+
+bindsym $mod+s exec "maim -s | xclip -selection clipboard -t image/png"
+bindsym $mod+Shift+s exec "maim -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png "
+bindsym $mod+Shift+Ctrl+s exec "maim | xclip -selection clipboard -t image/png"
+
+bindsym $mod+s exec "maim -s ~/Pictures/$(date +%s).png"
+bindsym $mod+Shift+s exec "maim -i $(xdotool getactivewindow) ~/Pictures/$(date +%s).png"
+bindsym $mod+Shift+Ctrl+s exec "maim ~/Pictures/$(date +%s).png"
 
 # change focus
 bindsym $mod+h focus left
